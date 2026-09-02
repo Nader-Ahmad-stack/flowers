@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="A little love, in bloom. A bouquet of baby-pink tulips, grown just for you." />
+    <title>This is for you — a little love, in bloom</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="experience" aria-label="A bouquet, grown just for you">
+      <div class="intro" aria-hidden="true">
+        <h1>This is for you</h1>
+        <span class="intro-line"></span>
+      </div>
+
+      <div class="garden">
+        <svg class="bouquet" viewBox="0 0 600 960" role="img" aria-labelledby="bouquet-title bouquet-description">
+          <title id="bouquet-title">This is for you</title>
+          <desc id="bouquet-description">Nine baby-pink tulips grow from the darkness. Curved green stems and pointed leaves unfold, then each flower opens its petals in its own time. A soft breeze moves through the finished bouquet.</desc>
+          <defs>
+            <linearGradient id="stem" x1="0" y1="1" x2="0.75" y2="0">
+              <stop offset="0" stop-color="#182e24" />
+              <stop offset="0.42" stop-color="#456349" />
+              <stop offset="1" stop-color="#799275" />
+            </linearGradient>
+            <linearGradient id="leaf" x1="0" y1="0.55" x2="1" y2="0.3">
+              <stop stop-color="#152b23" />
+              <stop offset="0.4" stop-color="#3d6049" />
+              <stop offset="0.55" stop-color="#759275" />
+              <stop offset="0.61" stop-color="#547657" />
+              <stop offset="1" stop-color="#223e30" />
+            </linearGradient>
+            <linearGradient id="leaf-back" x1="0" y1="0.8" x2="1" y2="0.2">
+              <stop stop-color="#182d25" />
+              <stop offset="0.5" stop-color="#4d6e53" />
+              <stop offset="0.58" stop-color="#71866a" />
+              <stop offset="1" stop-color="#243d2e" />
+            </linearGradient>
+            <linearGradient id="base-fade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="white" />
+              <stop offset="0.84" stop-color="white" />
+              <stop offset="0.985" stop-color="black" />
+            </linearGradient>
+            <mask id="bouquet-mask"><rect width="600" height="960" fill="url(#base-fade)" /></mask>
+            <radialGradient id="bloom-light">
+              <stop stop-color="#efb3c6" stop-opacity="0.12" />
+              <stop offset="0.45" stop-color="#d990ad" stop-opacity="0.035" />
+              <stop offset="1" stop-color="#d990ad" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="ground-light">
+              <stop stop-color="#d096a9" stop-opacity="0.11" />
+              <stop offset="0.4" stop-color="#ba7c98" stop-opacity="0.045" />
+              <stop offset="1" stop-color="#ba7c98" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <ellipse class="ground-glow" cx="300" cy="821" rx="237" ry="125" fill="url(#ground-light)" />
+          <g id="flowers" mask="url(#bouquet-mask)"></g>
+          <g id="particles" aria-hidden="true"></g>
+        </svg>
+      </div>
+
+      <footer class="closing">
+        <span class="closing-mark" aria-hidden="true"></span>
+        <p>a little love, in bloom.</p>
+        <div class="controls">
+          <button id="replay" type="button" aria-label="Watch the bouquet grow again">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1.4 7.2M4 4v6h6" /></svg>
+            <span>Watch it bloom again</span>
+          </button>
+          <span class="control-divider" aria-hidden="true"></span>
+          <button id="motion" class="motion-control" type="button" aria-label="Pause animation" aria-pressed="false">
+            <svg class="pause-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg>
+            <svg class="play-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 5 10 7-10 7Z" /></svg>
+          </button>
+        </div>
+      </footer>
+      <p class="sr-only" id="status" role="status" aria-live="polite">A bouquet is growing just for you.</p>
+      <noscript><p class="no-script">This is for you. Enable JavaScript to watch your tulips bloom.</p></noscript>
+    </main>
+  </body>
+</html>

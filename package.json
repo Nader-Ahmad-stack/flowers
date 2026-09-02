@@ -1,0 +1,11 @@
+{
+  "name": "this-is-for-you",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A cinematic, animated SVG bouquet of baby-pink tulips.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check script.js && node --check server.js"
+  }
+}
